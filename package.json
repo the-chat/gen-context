@@ -1,0 +1,14 @@
+{
+  "name": "gen-context",
+  "version": "1.0.0",
+  "main": "index.ts",
+  "license": "MIT",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
+  "repository": "git://github.com/the-chat/gen-context",
+  "devDependencies": {
+    "@the-chat/types": "^1.0.0",
+    "@types/react": "^17.0.39"
+  }
+}

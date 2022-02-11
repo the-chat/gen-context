@@ -7,4 +7,4 @@ const genStateContext = <T,>(defaultValue: T = null) =>
     <RealProvider value={useState(defaultValue)}>{children}</RealProvider>
   ))
 
-export default genStateContext
+export {genStateContext}

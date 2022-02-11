@@ -35,5 +35,5 @@ const genContext = <T,>(
   return [useMyContext, DoneProvider]
 }
 
-export type {ProviderWrapperProps, ProviderWrapper, DoneProvider}
+export type {ProviderWrapperProps}
 export default genContext

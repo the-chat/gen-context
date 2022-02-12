@@ -1,4 +1,4 @@
-import {useState} from "react"
+import React, {useState} from "react"
 import {State} from "@the-chat/types"
 import genContext from "./genContext"
 

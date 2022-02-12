@@ -7,6 +7,6 @@ exports.SimpleProviderWrapper = void 0;
 var react_1 = __importDefault(require("react"));
 var SimpleProviderWrapper = function (_a) {
     var RealProvider = _a.RealProvider, children = _a.children, value = _a.value;
-    return (<RealProvider value={value}>{children}</RealProvider>);
+    return (react_1.default.createElement(RealProvider, { value: value }, children));
 };
 exports.SimpleProviderWrapper = SimpleProviderWrapper;

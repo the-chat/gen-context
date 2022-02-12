@@ -7,6 +7,6 @@ exports.ProviderWrapperWithValueProp = void 0;
 var react_1 = __importDefault(require("react"));
 var ProviderWrapperWithValueProp = function (_a) {
     var children = _a.children, value = _a.value, RealProvider = _a.RealProvider;
-    return (<RealProvider value={value}>{children}</RealProvider>);
+    return (react_1.default.createElement(RealProvider, { value: value }, children));
 };
 exports.ProviderWrapperWithValueProp = ProviderWrapperWithValueProp;

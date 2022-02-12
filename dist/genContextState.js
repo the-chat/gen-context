@@ -18,20 +18,18 @@ var __importStar = (this && this.__importStar) || function (mod) {
     __setModuleDefault(result, mod);
     return result;
 };
-Object.defineProperty(exports, "__esModule", { value: true });
-var react_1 = __importStar(require("react"));
-var genContext = function (ProviderWrapper, defaultValue) {
-    if (defaultValue === void 0) { defaultValue = null; }
-    var Context = react_1.createContext(defaultValue);
-    var useMyContext = function () {
-        return react_1.useContext(Context);
-    };
-    var DoneProvider = function (_a) {
-        var children = _a.children, _b = _a.value, value = _b === void 0 ? defaultValue : _b;
-        return (<ProviderWrapper value={value} RealProvider={Context.Provider}>
-      {children}
-    </ProviderWrapper>);
-    };
-    return [useMyContext, DoneProvider];
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
 };
-exports.default = genContext;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.genStateContext = void 0;
+var react_1 = __importStar(require("react"));
+var genContext_1 = __importDefault(require("./genContext"));
+var genStateContext = function (defaultValue) {
+    if (defaultValue === void 0) { defaultValue = null; }
+    return genContext_1.default(function (_a) {
+        var RealProvider = _a.RealProvider, children = _a.children;
+        return (react_1.default.createElement(RealProvider, { value: react_1.useState(defaultValue) }, children));
+    });
+};
+exports.genStateContext = genStateContext;

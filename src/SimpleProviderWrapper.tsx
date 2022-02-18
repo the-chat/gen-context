@@ -5,8 +5,11 @@ const SimpleProviderWrapper = <T,>({
   RealProvider,
   children,
   value,
+  ...props
 }: ProviderWrapperProps<T>) => (
-  <RealProvider value={value}>{children}</RealProvider>
+  <RealProvider {...props} value={value}>
+    {children}
+  </RealProvider>
 )
 
 export {SimpleProviderWrapper}

@@ -1,5 +1,5 @@
 import React from "react"
-import {ProviderWrapperProps} from "./genContext"
+import {ProviderWrapperProps} from "./types"
 
 const SimpleProviderWrapper = <T,>({
   RealProvider,

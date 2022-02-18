@@ -12,7 +12,7 @@ type Value<T> = {value?: T}
 type UseMyContext<T> = <R extends T = T>() => R
 
 type ProviderWrapperProps<T> = PropsWithChildren<
-  Value<T> & {RealProvider: Provider<T>}
+  Value<T> & {RealProvider: Provider<T>} & {[key: string]: unknown}
 >
 type ProviderWrapper<T> = ComponentType<ProviderWrapperProps<T>>
 type DoneProvider<T> = FC<Value<T>>

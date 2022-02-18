@@ -1,13 +1,3 @@
-import { ComponentType, FC, PropsWithChildren, Provider } from "react";
-declare type Value<T> = {
-    value?: T;
-};
-declare type UseMyContext<T> = <R extends T = T>() => R;
-declare type ProviderWrapperProps<T> = PropsWithChildren<Value<T> & {
-    RealProvider: Provider<T>;
-}>;
-declare type ProviderWrapper<T> = ComponentType<ProviderWrapperProps<T>>;
-declare type DoneProvider<T> = FC<Value<T>>;
-declare const genContext: <T>(ProviderWrapper: ProviderWrapper<T>, defaultValue?: T) => [UseMyContext<T>, DoneProvider<T>];
-export type { ProviderWrapperProps };
+import { DoneProvider, ProviderWrapper, UseMyContext } from "./types";
+declare const genContext: <T, A extends object = {}>(ProviderWrapper?: ProviderWrapper<T, A>, defaultValue?: T) => [UseMyContext<T>, DoneProvider<T, A>];
 export default genContext;

@@ -1,6 +1,3 @@
-import React from "react";
 import { State } from "@the-chat/types";
-declare const genStateContext: <T>(defaultValue?: T) => [<R extends State<T> = State<T>>() => R, React.FunctionComponent<{
-    value?: State<T>;
-}>];
+declare const genStateContext: <T>(defaultValue?: T) => [import("./types").UseMyContext<State<T>>, import("./types").DoneProvider<State<T>, {}>];
 export { genStateContext };

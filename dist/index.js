@@ -19,4 +19,4 @@ var genContext_1 = require("./genContext");
 Object.defineProperty(exports, "default", { enumerable: true, get: function () { return __importDefault(genContext_1).default; } });
 __exportStar(require("./genContextState"), exports);
 __exportStar(require("./SimpleProviderWrapper"), exports);
-__exportStar(require("./ProviderWrapperWithValueProp"), exports);
+__exportStar(require("./types"), exports);

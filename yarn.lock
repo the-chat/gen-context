@@ -2,10 +2,10 @@
 # yarn lockfile v1
 
 
-"@the-chat/types@^1.0.2":
-  version "1.0.2"
-  resolved "https://npm.pkg.github.com/download/@the-chat/types/1.0.2/360db255aa3cdc34ee5161bb132980b84219d2b7e760932e98a53bacf3250769#caf071fb2aaa748185de3a9e2a024a42c9f000e9"
-  integrity sha512-zKsT0Bn8bsm+9E7m8FHXqOz+Affgh+PeFnvO+kc35ioH3Hm/5b+DU1tiYcMSR5/+OGC3VZh7dDUubyP/KNgGRg==
+"@the-chat/types@^1.0.6":
+  version "1.0.6"
+  resolved "https://registry.yarnpkg.com/@the-chat/types/-/types-1.0.6.tgz#1252ef8c4e084e46b04aacef44cf879b41a492e5"
+  integrity sha512-rAhFXhSZO3Co/tgfnhm/gs3ceW1pzEnHw2HecdAWdIKOU3vNH4TeEo1Gs0aLZy9Cy96bblK+elX+Q4Dq/ijSQQ==
 
 "@types/prop-types@*":
   version "15.7.4"

@@ -3,6 +3,9 @@
   "version": "1.1.0",
   "main": "dist/index.js",
   "license": "MIT",
+  "files": [
+    "dist"
+  ],
   "repository": "git://github.com/the-chat/gen-context",
   "devDependencies": {
     "@the-chat/types": "^1.0.5",

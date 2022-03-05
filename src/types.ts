@@ -9,11 +9,13 @@ export type Value<V> = { value?: V }
 
 export type UseMyContext<T> = <R extends T = T>() => R
 
-type ProviderProps<V, A extends BA = DA> = Value<V> & A
-
-export type ProviderWrapperProps<V, A extends BA = DA> = PropsWithChildren<
-  ProviderProps<V, A> & { RealProvider: Provider<V> }
+export type ProviderProps<V, A extends BA = DA> = PropsWithChildren<
+  Value<V> & A
 >
+
+export type ProviderWrapperProps<V, A extends BA = DA> = ProviderProps<V, A> & {
+  RealProvider: Provider<V>
+}
 
 export type ProviderWrapper<V, A extends BA = DA> = ComponentType<
   ProviderWrapperProps<V, A>

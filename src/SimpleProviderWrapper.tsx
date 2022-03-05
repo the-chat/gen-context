@@ -1,15 +1,15 @@
 import React from "react"
-import {ProviderWrapperProps} from "./types"
+import { DA, ProviderWrapperProps } from "./types"
 
-const SimpleProviderWrapper = <T,>({
+const SimpleProviderWrapper = <V, A extends DA = {}>({
   RealProvider,
   children,
   value,
   ...props
-}: ProviderWrapperProps<T>) => (
+}: ProviderWrapperProps<V | undefined, A>) => (
   <RealProvider {...props} value={value}>
     {children}
   </RealProvider>
 )
 
-export {SimpleProviderWrapper}
+export { SimpleProviderWrapper }

@@ -1,10 +1,10 @@
-import React, {useState} from "react"
-import {State} from "@the-chat/types"
+import React, { useState } from "react"
+import { State } from "@the-chat/types"
 import genContext from "./genContext"
 
-const genStateContext = <T,>(defaultValue: T = null) =>
-  genContext<State<T>>(({RealProvider, children}) => (
+const genStateContext = <V,>(defaultValue?: V) =>
+  genContext<State<V | undefined>>(({ RealProvider, children }) => (
     <RealProvider value={useState(defaultValue)}>{children}</RealProvider>
   ))
 
-export {genStateContext}
+export { genStateContext }

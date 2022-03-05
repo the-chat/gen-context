@@ -1,27 +1,27 @@
-import React, {createContext, useContext} from "react"
-import {SimpleProviderWrapper} from "."
-import {DoneProvider, ProviderWrapper, UseMyContext} from "./types"
+import React, { createContext, useContext } from "react"
+import { SimpleProviderWrapper } from "./SimpleProviderWrapper"
+import { DoneProvider, DA, ProviderWrapper, UseMyContext } from "./types"
 
-const genContext = <T, A extends object = {}>(
+const genContext = <V, A extends DA = {}>(
   /** Component that should return provider (RealProvider) and children */
-  ProviderWrapper: ProviderWrapper<T, A> = SimpleProviderWrapper,
+  ProviderWrapper: ProviderWrapper<V | undefined, A> = SimpleProviderWrapper,
   /** Default value for context and DoneProvider value */
-  defaultValue: T = null
-): [UseMyContext<T>, DoneProvider<T, A>] => {
+  defaultValue?: V
+): [UseMyContext<V>, DoneProvider<V, A>] => {
   const Context = createContext(defaultValue)
 
-  const useMyContext: UseMyContext<T> = <R extends T = T>() =>
+  const useMyContext: UseMyContext<V> = <R extends V = V>() =>
     useContext(Context) as R
 
   /** Component that user uses as Provider */
-  const DoneProvider: DoneProvider<T, A> = ({
+  const DoneProvider: DoneProvider<V, A> = ({
     children,
     value = defaultValue,
     ...props
   }) => (
     <ProviderWrapper
       {...(props as A)}
-      value={value}
+      // {...(value && { value })}
       RealProvider={Context.Provider}
     >
       {children}

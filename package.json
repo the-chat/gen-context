@@ -5,7 +5,7 @@
   "license": "MIT",
   "repository": "git://github.com/the-chat/gen-context",
   "devDependencies": {
-    "@the-chat/types": "^1.0.4",
+    "@the-chat/types": "^1.0.5",
     "@types/react": "^17.0.39"
   }
 }

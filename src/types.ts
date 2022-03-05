@@ -2,7 +2,7 @@ import { ComponentType, PropsWithChildren, Provider } from "react"
 
 // A - Additional props,BA - base A, DA - default A
 
-export type BA = Omit<Record<string, undefined>, "value">
+export type BA = Omit<Record<string, unknown>, "value">
 export type DA = Record<string, never>
 
 export type Value<V> = { value?: V }

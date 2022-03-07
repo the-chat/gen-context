@@ -1,7 +1,7 @@
 import React from "react"
-import { BA, DA, ProviderWrapperProps } from "./types"
+import { BA, ProviderWrapperProps } from "./types"
 
-const SimpleProviderWrapper = <V, A extends BA = DA>({
+const SimpleProviderWrapper = <V, A extends BA = BA>({
   RealProvider,
   children,
   value,
